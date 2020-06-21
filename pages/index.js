@@ -7,6 +7,12 @@ export default function Home() {
    return (
       <div className='content-center text-center'>
          <Head>
+            <meta property='og:type' content='app' />
+            <meta property='og:title' content='Load Up' />
+            <meta property='og:description' content='Social Trading App' />
+            {/* <meta property='og:image' content='LINK A LA IMAGEN DESTACADA' /> */}
+            <meta property='og:url' content='https://loadup.today' />
+            <meta property='og:site_name' content='Load Up Today' />
             <title>Load Up Today</title>
             <link rel='icon' href='/favicon.ico' />
          </Head>
