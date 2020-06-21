@@ -46,7 +46,7 @@ class Waitlist extends React.Component {
             <TextInput
                type='email'
                placeholder='E-Mail Address'
-               label='Subscribe for updates on Loadup Today'
+               label='Subscribe for updates on Loadup Today 💵'
                onChangeHandler={(event) => this.inputChanged(event)}
                value={this.state.email}
             />

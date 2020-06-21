@@ -8,13 +8,16 @@ export default function Home() {
             <title>Load Up Today</title>
             <link rel='icon' href='/favicon.ico' />
          </Head>
-         <h1>
-            Please go to{' '}
-            <Link href='/waitlist'>
-               <a>Waitlist</a>
-            </Link>
-            for regular updates
-         </h1>
+
+         <div className='max-w-md shadow-lg mx-auto'>
+            <h1>
+               Please go to
+               <Link href='/waitlist'>
+                  <a className='text-gren-600'> Waitlist </a>
+               </Link>
+               for regular updates 💸
+            </h1>
+         </div>
       </div>
    );
 }
