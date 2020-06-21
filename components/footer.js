@@ -1,3 +1,3 @@
-const footer = () => <footer>Copyright</footer>;
+const footer = () => <footer></footer>;
 
 export default footer;

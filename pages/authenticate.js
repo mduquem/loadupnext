@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import TextInput from '../components/textInput';
-import MainButton from '../components/MainButton';
+import MainButton from '../components/mainButton';
 
 class Authenticate extends React.Component {
    state = {
@@ -148,6 +148,7 @@ class Authenticate extends React.Component {
             {form}
 
             {switchScreen}
+            <h4>Hello my friends</h4>
 
             <style jsx>
                {`
