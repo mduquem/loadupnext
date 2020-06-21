@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import TextInput from '../components/textInput';
 import MainButton from '../components/mainButton';
 
@@ -65,6 +66,12 @@ class Waitlist extends React.Component {
                <title>Susbcribe to loadup!</title>
             </Head>
             {content}
+            <div className='mx-auto'>
+               Go{' '}
+               <Link href='/'>
+                  <a>Home</a>
+               </Link>
+            </div>
          </div>
       );
    }
