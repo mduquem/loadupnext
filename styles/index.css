@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   @apply bg-background-black p-12;
+}
+
+.label {
+   @apply text-white;
+}
+
+.input {
+   @apply w-full py-3 px-6 mt-3 bg-background-gray rounded-lg text-white;
+}
+
+.btn-main-green {
+   @apply w-full bg-main-green text-white font-bold rounded-lg mx-auto my-3 py-3;
+}
