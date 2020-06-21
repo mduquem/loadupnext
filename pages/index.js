@@ -11,7 +11,7 @@ export default function Home() {
             <link rel='icon' href='/favicon.ico' />
          </Head>
 
-         <div className='max-w-full md:max-w-md shadow-2xl mx-auto border-solid border-4 border-background-gray text-justify mb-20 p-5'>
+         <div className='max-w-full md:max-w-md shadow-2xl rounded-b-lg mx-auto border-solid border-4 border-background-gray text-justify mb-20 p-5'>
             <p>
                Loadup is a <strong>social trading app 📈</strong> available for paper trading first.
                This project aims to build the necessary infrastructure to eventually transition to
