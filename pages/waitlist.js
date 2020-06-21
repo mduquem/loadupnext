@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import TextInput from '../components/textInput';
 import MainButton from '../components/mainButton';
 
@@ -58,7 +59,14 @@ class Waitlist extends React.Component {
       if (this.state.success) {
          content = <p>Thank you! Expect technical and marketing updates soon</p>;
       }
-      return <div className='p-4 shadow-xl w-full  md:max-w-md mx-auto'>{content}</div>;
+      return (
+         <div className='p-4 shadow-xl w-full  md:max-w-md mx-auto'>
+            <Head>
+               <title>Susbcribe to loadup!</title>
+            </Head>
+            {content}
+         </div>
+      );
    }
 }
 
