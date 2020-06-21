@@ -7,7 +7,6 @@ export default function Home() {
             <title>Load Up Today</title>
             <link rel='icon' href='/favicon.ico' />
          </Head>
-         <h1>Welcome back</h1>
       </div>
    );
 }
