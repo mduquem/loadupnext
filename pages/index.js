@@ -11,10 +11,10 @@ export default function Home() {
 
          <div className='max-w-md shadow-lg mx-auto'>
             <h1>
-               Please go to
+               Please go to{' '}
                <Link href='/waitlist'>
-                  <a className='underline text-gren-600'> Waitlist </a>
-               </Link>
+                  <a className='underline text-green-500'>Waitlist</a>
+               </Link>{' '}
                for regular updates 💸
             </h1>
          </div>
