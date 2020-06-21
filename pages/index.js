@@ -32,7 +32,7 @@ export default function Home() {
             </div>
          </div>
 
-         <div className='max-w-md shadow-lg mx-auto mt-20'>
+         <div className='max-w-md mx-auto mt-20'>
             <h1>
                Please go to{' '}
                <Link href='/waitlist'>
