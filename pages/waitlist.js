@@ -67,10 +67,13 @@ class Waitlist extends React.Component {
             </Head>
             {content}
             <div className='mx-auto'>
-               Go{' '}
-               <Link href='/'>
-                  <a>Home</a>
-               </Link>
+               <small>
+                  {' '}
+                  Go{' '}
+                  <Link href='/'>
+                     <a>Home</a>
+                  </Link>
+               </small>
             </div>
          </div>
       );
