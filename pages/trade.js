@@ -63,7 +63,7 @@ class Trade extends React.Component {
                <SelectInput
                   label='Market Type'
                   options={this.state.selectOptions}
-                  value={this.state.formData.marketType}
+                  defaultValue={this.state.formData.marketType}
                   onChangeHandler={this.selectChangeHandler}
                />
                <TextInput
