@@ -145,9 +145,9 @@ class Authenticate extends React.Component {
          <div className='md:max-w-lg mx-auto max-w-screen-md '>
             <h1 className='text-white'> {this.state.isSignup ? 'Sign up' : 'Sign in'}</h1>
             <h2>Fill in your credentials</h2>
-            {/* {form}
+            {form}
 
-            {switchScreen} */}
+            {switchScreen}
             <h4>Hello</h4>
 
             <style jsx>
