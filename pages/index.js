@@ -13,7 +13,7 @@ export default function Home() {
             <h1>
                Please go to
                <Link href='/waitlist'>
-                  <a className='text-gren-600'> Waitlist </a>
+                  <a className='underline text-gren-600'> Waitlist </a>
                </Link>
                for regular updates 💸
             </h1>
