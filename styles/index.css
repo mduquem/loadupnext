@@ -28,5 +28,5 @@ body {
 }
 
 .btn-main-green {
-   @apply w-full bg-main-green text-white font-bold rounded-lg mx-auto my-3 py-3;
+   @apply w-full bg-main-green text-white rounded-lg mx-auto my-3 py-3;
 }
