@@ -7,7 +7,7 @@ const stock = ({ stock }) => (
       <div>
          <ul>
             {stock.lastWeekData.map((day) => {
-               return <li>{day.price}</li>;
+               return <li key={Math.random()}>{day.price}</li>;
             })}
          </ul>
       </div>

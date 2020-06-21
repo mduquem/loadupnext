@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+   font-family: 'inter';
+   src: url('/fonts/Inter-UI-Regular.otf'), url('/fonts/Inter-UI-MediumItalic.otf'),
+      url('/fonts/Inter-UI-Medium.otf'), url('/fonts/Inter-UI-Italic.otf'),
+      url('/fonts/Inter-UI-BoldItalic.otf'), url('/fonts/Inter-UI-Bold.otf'),
+      url('/fonts/Inter-UI-BlackItalic.otf'), url('/fonts/Inter-UI-Black.otf');
+}
+
+* {
+   font-family: 'inter', sans-serif;
+}
+
 body {
    @apply bg-background-black p-12;
 }

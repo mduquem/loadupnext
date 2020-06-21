@@ -1,11 +1,11 @@
 import NavigationItem from './navigationItem/navigationItem';
 
 const NavigationItems = () => (
-   <ul>
-      <NavigationItem>Home</NavigationItem>
+   <ul className='flex'>
       <NavigationItem>Browse</NavigationItem>
       <NavigationItem>Trade</NavigationItem>
       <NavigationItem>Profile</NavigationItem>
+      <NavigationItem>Authenticate</NavigationItem>
    </ul>
 );
 
