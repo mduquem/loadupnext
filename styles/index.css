@@ -3,15 +3,12 @@
 @tailwind utilities;
 
 @font-face {
-   font-family: 'inter';
-   src: url('/fonts/Inter-UI-Regular.otf'), url('/fonts/Inter-UI-MediumItalic.otf'),
-      url('/fonts/Inter-UI-Medium.otf'), url('/fonts/Inter-UI-Italic.otf'),
-      url('/fonts/Inter-UI-BoldItalic.otf'), url('/fonts/Inter-UI-Bold.otf'),
-      url('/fonts/Inter-UI-BlackItalic.otf'), url('/fonts/Inter-UI-Black.otf');
+   font-family: 'Inter';
+   src: url('/fonts/Inter-UI-Regular.otf') format('opentype');
 }
 
 * {
-   font-family: 'inter', sans-serif;
+   font-family: 'Inter', sans-serif;
    color: white;
 }
 
