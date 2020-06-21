@@ -148,7 +148,7 @@ class Authenticate extends React.Component {
             {form}
 
             {switchScreen}
-            <h4>Hello</h4>
+            <h4>Hello my friends</h4>
 
             <style jsx>
                {`
