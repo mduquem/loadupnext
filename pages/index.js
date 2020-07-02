@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import TwitterIcon from '../components/twitterIcon';
+import Loader from '../components/UI/loader';
 
 export default function Home() {
    return (
@@ -23,6 +24,7 @@ export default function Home() {
                This project aims to build the necessary infrastructure to eventually transition to
                real-world trading. <strong>Beta version will include these features: </strong>
             </p>
+
             <br />
             <ul className='list-inside'>
                <li>💵 Browse stock data & visualizations</li>
