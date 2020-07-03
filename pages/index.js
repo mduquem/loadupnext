@@ -20,9 +20,8 @@ export default function Home() {
 
          <div className='max-w-full md:max-w-md shadow-2xl rounded-b-lg mx-auto border-solid border-4 border-background-gray text-justify mb-20 p-5'>
             <p>
-               Loadup is a <strong>social trading app 📈</strong> available for paper trading first.
-               This project aims to build the necessary infrastructure to eventually transition to
-               real-world trading. <strong>Beta version will include these features: </strong>
+               Loadup is a <strong>social-paper-trading app 📈</strong>
+               <strong>Beta version (available by Fall) will include these features: </strong>
             </p>
 
             <br />
