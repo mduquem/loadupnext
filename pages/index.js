@@ -4,7 +4,8 @@ import Link from 'next/link';
 import TwitterIcon from '../components/twitterIcon';
 import Loader from '../components/UI/loader';
 
-export default function Home() {
+export default function Home({ user }) {
+   console.log('THIS IS THE USER I GET', user);
    return (
       <div className='content-center text-center'>
          <Head>
@@ -51,3 +52,19 @@ export default function Home() {
       </div>
    );
 }
+
+Home.getInitialProps = async () => {
+   // const response = await fetch('http://localhost:8081/auth/register', {
+   //    method: 'POST',
+   //    body: {
+   //       username: 'mduquem',
+   //       email: 'mduquem1@gmail.com',
+   //       password: 'password',
+   //    },
+   // });
+   // const user = await response.json();
+   // return {
+   //    user,
+   // };
+   return {};
+};
