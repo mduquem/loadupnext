@@ -162,11 +162,11 @@ class Home extends React.Component {
             </div>
             <div>
                <div onClick={this.twitterHandle} style={{ cursor: 'pointer' }}>
-                  <img className='twitter' src={twitter} alt='twitter icon' />
+                  <img className='twitter  shadow-2xl' src={twitter} alt='twitter icon' />
                </div>
 
                <div className='burger-container'>
-                  <div className=' form-container shadow-2xl '>
+                  <div className=' form-container shadow-3xl '>
                      <div className='inside-container'>
                         <h1 className='title'>Coming soon...</h1>
                         <ul className='list'>
