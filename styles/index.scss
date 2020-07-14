@@ -4,7 +4,11 @@
 
 @font-face {
    font-family: 'Inter';
-   src: url('/fonts/Inter-UI-Regular.otf') format('opentype');
+   src: url('/fonts/Inter-Black.ttf');
+}
+@font-face {
+   font-family: 'InterBold';
+   src: url('/fonts/Inter-Bold.ttf');
 }
 
 * {
@@ -12,8 +16,14 @@
    color: white;
 }
 
+button,
+input,
+input::placeholder {
+   font-family: 'InterBold', sans-serif;
+}
+
 body {
-   @apply bg-background-black p-12;
+   @apply bg-background-green p-12;
 }
 
 .label {

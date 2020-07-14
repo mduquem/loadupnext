@@ -3,10 +3,13 @@ module.exports = {
    theme: {
       extend: {
          colors: {
-            'background-black': '#16191C',
-            'background-gray': '#1C2228',
+            'background-black': '#161A1D',
+            'background-gray': '#1B2127',
+            'background-green': '#2C343A',
+
             'color-gray': '#717B8A',
             'main-green': '#51BE60',
+            'secondary-blue': '#0F8CEB',
          },
       },
       container: {

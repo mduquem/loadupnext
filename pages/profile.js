@@ -2,7 +2,12 @@ class Profile extends React.Component {
    render() {
       return (
          <div>
-            <h1>Profile</h1>
+            <div className='container'>
+               <div className='flex-column p-4 shadow-xl w-full  md:max-w-md mx-auto'>
+                  <img src='/public/img/user-placeholder.jpeg' className='rounded-bl-full' />
+                  <h2>Miguel Duque </h2>
+               </div>
+            </div>
          </div>
       );
    }
