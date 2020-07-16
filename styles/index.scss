@@ -16,6 +16,11 @@
    color: white;
 }
 
+html {
+   margin: 0 !important;
+   padding: 0 !important;
+}
+
 button,
 input,
 input::placeholder {
@@ -23,6 +28,7 @@ input::placeholder {
 }
 
 body {
+   padding: 0 !important;
    @apply bg-background-green p-12;
 }
 

@@ -71,32 +71,43 @@ class Home extends React.Component {
          });
       }
    };
-   twitterHandle = () => {
-      window.location.hrf = 'https://www.twitter.com/mduquem';
-   };
 
    render() {
       let content = (
-         <form className=' input-group '>
-            <div className='email-input'>
-               <img className='email-icon' src={emailSvg} alt='email icon' />
+         <form className=" input-group ">
+            <div className="email-input">
+               <img className="email-icon" src={emailSvg} alt="email icon" />
 
                <input
-                  type='email'
-                  className='shadow-md placeholder-color-gray py-3 px-6 mt-3 bg-background-gray rounded-lg text-white input'
-                  placeholder='E-Mail Address'
+                  type="email"
+                  className="shadow-md placeholder-color-gray py-3 px-6 mt-3 bg-background-gray rounded-lg text-white input"
+                  placeholder="E-Mail Address"
                   onChange={this.inputChanged}
                   value={this.state.email}
                />
             </div>
 
             <button
-               className='sub-btn text-white font-bold py-2 px-4 rounded-lg bg-secondary-blue hover:bg-blue-700 shadow-md '
+               className="sub-btn text-white font-bold py-2 px-4 rounded-lg bg-secondary-blue hover:bg-blue-700 shadow-md "
                onClick={this.buttonClicked}
             >
                Subscribe for updates
             </button>
             <style jsx>{`
+               @media (max-width: 720px) {
+                  .input-group {
+                     flex-direction: column;
+                  }
+
+                  .email-input {
+                     margin-left: 0;
+                     margin-bottom: 10px;
+                  }
+
+                  .sub-btn {
+                     margin: 0 !important;
+                  }
+               }
                .email-icon {
                   position: absolute;
                   top: 30%;
@@ -143,7 +154,7 @@ class Home extends React.Component {
             <div>
                <h1>This email has already been used. Please try again with another email</h1>
                <button
-                  className='sub-btn text-white font-bold py-2 px-4 rounded-lg bg-main-green hover:bg-green-700 shadow-md'
+                  className="sub-btn text-white font-bold py-2 px-4 rounded-lg bg-main-green hover:bg-green-700 shadow-md"
                   onClick={this.refreshPage}
                >
                   Retry
@@ -152,42 +163,44 @@ class Home extends React.Component {
          );
       }
 
+      const twtRef = 'https://www.twitter.com/mduquem';
       return (
-         <div className='max-h-screen container landing'>
+         <div className="container">
             <Head>
                <title>Susbcribe to loadup!</title>
             </Head>
-            <div className='landing'>
+            <div className="landing ">
                <img src={triangles} />
             </div>
             <div>
-               <div onClick={this.twitterHandle} style={{ cursor: 'pointer' }}>
-                  <img className='twitter  shadow-2xl' src={twitter} alt='twitter icon' />
-               </div>
+               <a href="https://www.twitter.com">
+                  {' '}
+                  <img className="twitter  shadow-2xl " src={twitter} alt="twitter icon" />
+               </a>
 
-               <div className='burger-container'>
-                  <div className=' form-container shadow-3xl '>
-                     <div className='inside-container'>
-                        <h1 className='title'>Coming soon...</h1>
-                        <ul className='list'>
+               <div className="burger-container noMobile">
+                  <div className=" form-container shadow-3xl ">
+                     <div className="inside-container">
+                        <h1 className="title">Coming soon...</h1>
+                        <ul className="list">
                            <li>
-                              <p className='list-item'>Browse & visualize trending stocks</p>
+                              <p className="list-item">Browse & visualize trending stocks</p>
                            </li>
                            <li>
-                              <p className='list-item'>
+                              <p className="list-item">
                                  Trade the most popular stocks, or paper-trade if you want to test
                                  your strategy first
                               </p>
                            </li>
                            <li>
-                              <p className='list-item'>Prove who's the boss among your friends</p>
+                              <p className="list-item">Prove who's the boss among your friends</p>
                            </li>
                         </ul>
-                        <div className='input-group'>{content}</div>
+                        <div className="input-group">{content}</div>
                      </div>
                   </div>
-                  <div className='iphone-container'>
-                     <img src={iphone} alt='iphone screenshot with stock data and graphics' />
+                  <div className="iphone-container">
+                     <img src={iphone} alt="iphone screenshot with stock data and graphics" />
                   </div>
                </div>
             </div>
@@ -208,9 +221,61 @@ class Home extends React.Component {
                      z-index: -10;
                      overflow-x: visible;
                   }
+                  .container {
+                     height: 100vh;
+                     width: 100vw;
+                  }
+                  @media (max-width: 720px) {
+                     * {
+                        margin: 0 !important;
+                     }
+                     .burger-container {
+                        margin: 0;
+                        padding: 0;
+                     }
+                     .no-mobile {
+                        display: none;
+                     }
+                     .just-mobile {
+                        display: block;
+                     }
+
+                     .form-container {
+                        width: auto !important;
+                        margin-top: 20px !important;
+                        padding: 20px;
+                     }
+                     .inside-container {
+                        margin: 0 !important;
+                        padding: 0;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        display: none;
+                     }
+
+                     .landing {
+                        left: 60%;
+                     }
+                     .landing > img {
+                        transform: rotate(180deg) scaley(100);
+                     }
+                     .iphone-container {
+                        display: none;
+                     }
+                     .list,
+                     .list-item {
+                        list-style: none !important;
+                        padding: 0 !important;
+                        margin: 0 !important;
+                     }
+                  }
                   .burger-container {
                      position: relative;
                      margin: 40px 100px auto 90px;
+                  }
+                  .just-mobile {
+                     display: none;
                   }
                   .form-container {
                      width: 998px;
@@ -225,7 +290,6 @@ class Home extends React.Component {
 
                   .inside-container {
                      margin: 85px 150px;
-
                      display: flex;
                      flex-direction: column;
                      justify-content: space-around;
@@ -234,6 +298,9 @@ class Home extends React.Component {
                      position: absolute;
                      right: -10vw;
                      top: -40px;
+                  }
+                  .mobile-container {
+                     display: none;
                   }
                   .title {
                      font-size: 48px;
