@@ -269,6 +269,9 @@ class Home extends React.Component {
                         padding: 0 !important;
                         margin: 0 !important;
                      }
+                     .twitter {
+                        display: none;
+                     }
                   }
                   .burger-container {
                      position: relative;
