@@ -173,7 +173,7 @@ class Home extends React.Component {
                <img src={triangles} />
             </div>
             <div>
-               <a href="https://www.twitter.com">
+               <a href="https://twitter.com/miguelduque">
                   {' '}
                   <img className="twitter  shadow-2xl " src={twitter} alt="twitter icon" />
                </a>
@@ -268,9 +268,6 @@ class Home extends React.Component {
                         list-style: none !important;
                         padding: 0 !important;
                         margin: 0 !important;
-                     }
-                     .twitter {
-                        display: none;
                      }
                   }
                   .burger-container {
