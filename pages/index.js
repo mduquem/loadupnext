@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 import triangles from '../public/svg/triangles.svg';
 import emailSvg from '../public/svg/email.svg';
+import loadupSvg from '../public/svg/loadup.svg';
+
 import iphone from '../public/img/iphone.png';
 import twitter from '../public/img/twitter.png';
 
@@ -173,10 +175,9 @@ class Home extends React.Component {
                <img src={triangles} />
             </div>
             <div>
-               <a href="https://twitter.com/miguelduque">
-                  {' '}
-                  <img className="twitter  shadow-2xl " src={twitter} alt="twitter icon" />
-               </a>
+               <div className="logo">
+                  <img className="twitter  shadow-2xl " src={loadupSvg} alt="logo" />
+               </div>
 
                <div className="burger-container noMobile">
                   <div className=" form-container shadow-3xl ">
@@ -212,6 +213,14 @@ class Home extends React.Component {
                      src: url('/fonts/Oswald-Bold.ttf');
                   }
 
+                  .logo {
+                     width: 200px;
+                     height: auto;
+                     background-color: transparent;
+                     box-shadow: none !important;
+                     border: none !important;
+                  }
+
                   .landing {
                      position: fixed;
                      top: 0;
@@ -228,6 +237,9 @@ class Home extends React.Component {
                   @media (max-width: 720px) {
                      * {
                         margin: 0 !important;
+                     }
+                     .logo {
+                        width: 50px;
                      }
                      .burger-container {
                         margin: 0;
