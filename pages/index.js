@@ -154,7 +154,7 @@ class Home extends React.Component {
 
                .logo {
                   width: 60px;
-                  margin: 5px 5px 5px 10px;
+                  margin: 5px 5px 0 10px;
                   padding-bottom: -5px;
                }
                @media (min-width: 800px) {
@@ -243,15 +243,6 @@ class Home extends React.Component {
                      src: url('/fonts/Oswald-Bold.ttf');
                   }
 
-                  .logo {
-                     width: 100px;
-                     height: auto;
-                     background-color: transparent;
-                     box-shadow: none !important;
-                     border: none !important;
-                     margin: -10px;
-                  }
-
                   .landing {
                      position: fixed;
                      top: 0;
@@ -276,6 +267,7 @@ class Home extends React.Component {
                      }
                      .title {
                         font-size: 36px;
+                        margin-bottom: 20px !important;
                      }
                      .burger-container {
                         margin: 0;
@@ -311,8 +303,12 @@ class Home extends React.Component {
                      .iphone-container {
                         display: none;
                      }
-                     .list,
-                     .list-item {
+                     .list {
+                        list-style: none !important;
+                        padding: 0 !important;
+                        margin: 20px 0 !important;
+                     }
+                     .list .list-item {
                         list-style: none !important;
                         padding: 0 !important;
                         margin: 0 !important;
