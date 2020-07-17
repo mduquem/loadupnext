@@ -90,15 +90,16 @@ class Home extends React.Component {
             </div>
 
             <button
-               className="sub-btn text-white font-bold py-2 px-4 rounded-lg bg-secondary-blue hover:bg-blue-700 shadow-md "
+               className="sub-btn text-white  py-2 px-4 rounded-lg bg-secondary-blue hover:bg-blue-700 shadow-md "
                onClick={this.buttonClicked}
             >
-               Subscribe for updates
+               Subscribe
             </button>
             <style jsx>{`
                @media (max-width: 720px) {
                   .input-group {
                      flex-direction: column;
+                     align-items: center !important;
                   }
 
                   .email-input {
@@ -182,19 +183,26 @@ class Home extends React.Component {
                <div className="burger-container noMobile">
                   <div className=" form-container shadow-3xl ">
                      <div className="inside-container">
-                        <h1 className="title">Coming soon...</h1>
+                        <h1 className="title">Subscribe for beta access</h1>
                         <ul className="list">
                            <li>
-                              <p className="list-item">Browse & visualize trending stocks</p>
-                           </li>
-                           <li>
                               <p className="list-item">
-                                 Trade the most popular stocks, or paper-trade if you want to test
-                                 your strategy first
+                                 <span className="list-emphasis">Browse</span> & visualize trending
+                                 stocks
                               </p>
                            </li>
                            <li>
-                              <p className="list-item">Prove who's the boss among your friends</p>
+                              <p className="list-item">
+                                 <span className="list-emphasis">Trade </span>
+                                 the most popular stocks, or paper-trade if you want to test your
+                                 strategy first
+                              </p>
+                           </li>
+                           <li>
+                              <p className="list-item">
+                                 <span className="list-emphasis">Prove</span> who's the boss among
+                                 your friends
+                              </p>
                            </li>
                         </ul>
                         <div className="input-group">{content}</div>
@@ -235,6 +243,7 @@ class Home extends React.Component {
                      height: 100vh;
                      width: 100vw;
                      margin: 10px 0 !important;
+                     padding: 10px !important;
                   }
                   @media (max-width: 720px) {
                      * {
@@ -242,6 +251,9 @@ class Home extends React.Component {
                      }
                      .logo {
                         width: 50px;
+                     }
+                     .title {
+                        font-size: 36px;
                      }
                      .burger-container {
                         margin: 0;
@@ -303,7 +315,7 @@ class Home extends React.Component {
                   }
 
                   .inside-container {
-                     margin: 85px 150px;
+                     margin: 85px 100px;
                      display: flex;
                      flex-direction: column;
                      justify-content: space-around;
@@ -324,6 +336,11 @@ class Home extends React.Component {
                   }
                   .list-item {
                      font-size: 16px;
+                  }
+                  .list-emphasis {
+                     text-decoration: underline !important;
+                     text-style: italic;
+                     font-weight: 600;
                   }
                   .list {
                      list-style: disc;
