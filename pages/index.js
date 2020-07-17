@@ -214,11 +214,12 @@ class Home extends React.Component {
                   }
 
                   .logo {
-                     width: 200px;
+                     width: 100px;
                      height: auto;
                      background-color: transparent;
                      box-shadow: none !important;
                      border: none !important;
+                     margin: -10px;
                   }
 
                   .landing {
@@ -233,6 +234,7 @@ class Home extends React.Component {
                   .container {
                      height: 100vh;
                      width: 100vw;
+                     margin: 10px 0 !important;
                   }
                   @media (max-width: 720px) {
                      * {
