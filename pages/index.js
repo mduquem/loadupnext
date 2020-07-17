@@ -77,16 +77,22 @@ class Home extends React.Component {
    render() {
       let content = (
          <form className=" input-group ">
-            <div className="email-input">
-               <img className="email-icon" src={emailSvg} alt="email icon" />
+            <div className="flex items-center">
+               {' '}
+               <div className="email-input">
+                  <img className="email-icon" src={emailSvg} alt="email icon" />
 
-               <input
-                  type="email"
-                  className="shadow-md placeholder-color-gray py-3 px-6 mt-3 bg-background-gray rounded-lg text-white input"
-                  placeholder="E-Mail Address"
-                  onChange={this.inputChanged}
-                  value={this.state.email}
-               />
+                  <input
+                     type="email"
+                     className="shadow-md placeholder-color-gray py-3 px-6 mt-3 bg-background-gray rounded-lg text-white input"
+                     placeholder="E-Mail Address"
+                     onChange={this.inputChanged}
+                     value={this.state.email}
+                  />
+               </div>
+               <div className="logo">
+                  <img src={loadupSvg} alt="logo" />
+               </div>
             </div>
 
             <button
@@ -99,7 +105,7 @@ class Home extends React.Component {
                @media (max-width: 720px) {
                   .input-group {
                      flex-direction: column;
-                     align-items: center !important;
+                     align-items: flex-start !important;
                   }
 
                   .email-input {
@@ -107,8 +113,13 @@ class Home extends React.Component {
                      margin-bottom: 10px;
                   }
 
+                  .input {
+                     width: 100% !important;
+                  }
+
                   .sub-btn {
                      margin: 0 !important;
+                     width: 100% !important;
                   }
                }
                .email-icon {
@@ -139,6 +150,17 @@ class Home extends React.Component {
                .email-input {
                   position: relative;
                   width: 295px;
+               }
+
+               .logo {
+                  width: 60px;
+                  margin: 5px 5px 5px 10px;
+                  padding-bottom: -5px;
+               }
+               @media (min-width: 800px) {
+                  .logo {
+                     display: none;
+                  }
                }
             `}</style>
          </form>
