@@ -271,6 +271,10 @@ class Home extends React.Component {
                      * {
                         margin: 0 !important;
                      }
+                     .container {
+                        width: 80vw;
+                     }
+
                      .logo {
                         width: 50px;
                      }
@@ -290,8 +294,9 @@ class Home extends React.Component {
 
                      .form-container {
                         width: auto !important;
-                        margin-top: 20px !important;
-                        padding: 20px;
+
+                        margin: 10px 100px 0 10px !important;
+                        padding: 10px;
                      }
                      .inside-container {
                         margin: 0 !important;
