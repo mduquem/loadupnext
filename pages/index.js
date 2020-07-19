@@ -205,7 +205,7 @@ class Home extends React.Component {
                <div className="burger-container noMobile">
                   <div className=" form-container shadow-3xl ">
                      <div className="inside-container">
-                        <h1 className="title">Subscribe for beta access</h1>
+                        <h1 className="title">Do it for the gram 🤳🏻</h1>
                         <ul className="list">
                            <li>
                               <p className="list-item">
@@ -223,7 +223,7 @@ class Home extends React.Component {
                            <li>
                               <p className="list-item">
                                  <span className="list-emphasis">Prove</span> who's the boss among
-                                 your friends
+                                 your friends & flex your winning strategy 💪🏼
                               </p>
                            </li>
                         </ul>
