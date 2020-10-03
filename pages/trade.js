@@ -1,5 +1,5 @@
 import TextInput from '../components/textInput';
-import Loader from '../components/UI/Loader';
+import Loader from '../components/UI/loader';
 import SelectInput from '../components/selectInput';
 import MainButton from '../components/mainButton';
 
