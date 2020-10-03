@@ -1,85 +1,119 @@
 import TextInput from '../components/textInput';
+import Loader from '../components/UI/Loader';
 import SelectInput from '../components/selectInput';
 import MainButton from '../components/mainButton';
 
 class Trade extends React.Component {
-   state = {
-      formData: {
-         symbol: '',
-         symbolIsValid: false,
-         marketType: '',
+	state = {
+		formData: {
+			symbol: '',
+			symbolIsValid: false,
+			amount: '',
+			amountIsValid: false,
+			formIsValid: false,
+			error: ''
+		},
+		success: false,
+		loading: false,
+		availableAssets: [
+			{ text: 'Tesla', value: 'TSLA' },
+			{ text: 'Bitcoin', value: 'BTC' }
+		]
+	};
 
-         shares: '',
-         sharesIsValid: false,
-         formIsValid: false,
-         error: '',
-      },
-      selectOptions: [
-         { value: 'market', text: 'Market Price' },
-         { value: 'endofday', text: 'End of the Day' },
-         { value: 'fornexthour', text: 'For the next hour' },
-      ],
-   };
+	changeHandler = (event) => {
+		this.setState({
+			...this.state,
+			formData: {
+				...this.state.formData,
+				[event.target.name]: event.target.value
+			}
+		});
+	};
 
-   changeHandler = (event) => {
-      this.setState({
-         ...this.state,
-         formData: {
-            ...this.state.formData,
-            [event.target.name]: event.target.value,
-         },
-      });
-   };
+	buttonClicked = (event) => {
+		this.setState({
+			...this.state,
+			loading: true
+		});
+		event.preventDefault();
+		setTimeout(() => {
+			console.log('inside timeout');
+			this.setState({
+				...this.state,
+				loading: false,
+				success: true
+			});
+		}, 3000);
+		console.log('button clicked', this.state.formData);
+	};
 
-   buttonClicked = (event) => {
-      event.preventDefault();
-      console.log('button clicked', this.state.formData);
-   };
+	selectChangeHandler = (event) => {
+		this.setState({
+			...this.state,
+			formData: {
+				...this.state.formData,
+				symbol: event.target.value
+			}
+		});
+	};
 
-   selectChangeHandler = (event) => {
-      this.setState({
-         ...this.state,
-         formData: {
-            ...this.state.formData,
-            marketType: event.target.value,
-         },
-      });
-   };
+	render() {
+		let button = <MainButton clicked={this.buttonClicked}>Comprar</MainButton>;
 
-   render() {
-      return (
-         <div className='p-4 shadow-xl w-full  md:max-w-md mx-auto'>
-            <form>
-               <TextInput
-                  onChangeHandler={this.changeHandler}
-                  value={this.state.formData.symbol}
-                  type='text'
-                  placeholder='Enter Stock Here'
-                  label='Symbol'
-                  name='symbol'
-                  minLength='3'
-                  maxLength='6'
-               />
-               <SelectInput
-                  label='Market Type'
-                  options={this.state.selectOptions}
-                  defaultValue={this.state.formData.marketType}
-                  onChangeHandler={this.selectChangeHandler}
-               />
-               <TextInput
-                  onChangeHandler={this.changeHandler}
-                  value={this.state.formData.shares}
-                  type='text'
-                  placeholder='100'
-                  label='Shares'
-                  name='shares'
-                  minLength='1'
-               />
-               <MainButton clicked={this.buttonClicked}>Buy</MainButton>
-            </form>
-         </div>
-      );
-   }
+		if (this.state.loading) {
+			button = <Loader />;
+		}
+		if (this.state.success) {
+			button = <h2>¡Orden creada exitosamente!</h2>;
+		}
+		return (
+			<>
+				{/* <div className='mx-auto p-4 p-4 shadow w-full  md:max-w-md mx-auto'>
+					<h2>Escoge un activo</h2>
+					<div>
+						<div className='input'>{}</div>
+					</div>
+					<ul>
+						{this.state.availableAssets.map((asset) => {
+							return <li>{asset.name}</li>;
+						})}
+					</ul>
+				</div> */}
+
+				<div className='p-4 shadow w-full  md:max-w-md mx-auto'>
+					<form>
+						{/* <TextInput
+							onChangeHandler={this.changeHandler}
+							value={this.state.formData.symbol}
+							type='text'
+							label='Activo'
+							name='symbol'
+							minLength='3'
+							maxLength='6'
+							disabled
+						/> */}
+						<SelectInput
+							label='Activo'
+							options={this.state.availableAssets}
+							defaultValue={this.state.formData.marketType}
+							onChangeHandler={this.selectChangeHandler}
+						/>
+						<TextInput
+							onChangeHandler={this.changeHandler}
+							value={this.state.formData.amount}
+							type='text'
+							placeholder='10.000'
+							label='Monto (mínimo 10.000 COP)'
+							name='amount'
+							minLength='1'
+						/>
+						{button}
+					</form>
+				</div>
+			</>
+		);
+	}
 }
 
 export default Trade;
