@@ -237,12 +237,6 @@ class Home extends React.Component {
 								</Link>
 							</div>
 						</div>
-						{/* <div className='ihpone-container'>
-							<img
-								src={iphone}
-								alt='iphone screenshot with stock data and graphics'
-							/>
-						</div> */}
 					</div>
 				</div>
 

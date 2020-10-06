@@ -3,8 +3,10 @@ import Loader from '../components/UI/loader';
 import SelectInput from '../components/selectInput';
 import MainButton from '../components/mainButton';
 import triangles from '../public/svg/triangles.svg';
-
+import loadupSvg from '../public/svg/loadup.svg';
 import styles from './trade.module.scss';
+import Head from 'next/head';
+import Link from 'next/link';
 
 class Trade extends React.Component {
 	state = {
@@ -70,14 +72,23 @@ class Trade extends React.Component {
 		if (this.state.success) {
 			button = <h2>¡Orden creada exitosamente!</h2>;
 		}
+		const cardCss =
+			'p-4 mt-5 shadow w-full  md:max-w-md mx-auto form-container';
 		return (
-			<div className='container'>
-				<div className={styles.landing}>
-					<img src={triangles} />
-				</div>
-				<div className='p-4 mt-5 shadow w-full  md:max-w-md mx-auto form-container'>
-					<form className='inside-container'>
-						{/* <TextInput
+			<>
+				<div className={styles.container}>
+					<Head>
+						<title>¡Invierte en acciones con Loadup!</title>
+					</Head>
+					<div className={styles.landing}>
+						<img src={triangles} />
+					</div>
+					<div className={styles.logo}>
+						<img className='twitter  shadow-2xl ' src={loadupSvg} alt='logo' />
+					</div>
+					<div className={cardCss}>
+						<form className='inside-container'>
+							{/* <TextInput
 							onChangeHandler={this.changeHandler}
 							value={this.state.formData.symbol}
 							type='text'
@@ -87,25 +98,27 @@ class Trade extends React.Component {
 							maxLength='6'
 							disabled
 						/> */}
-						<SelectInput
-							label='Activo'
-							options={this.state.availableAssets}
-							defaultValue={this.state.formData.marketType}
-							onChangeHandler={this.selectChangeHandler}
-						/>
-						<TextInput
-							onChangeHandler={this.changeHandler}
-							value={this.state.formData.amount}
-							type='text'
-							placeholder='10.000'
-							label='Monto (mínimo 10.000 COP)'
-							name='amount'
-							minLength='1'
-						/>
-						{button}
-					</form>
-				</div>
-				{/* <div className='mx-auto p-4 p-4 shadow w-full  md:max-w-md mx-auto'>
+							<SelectInput
+								label='Activo'
+								options={this.state.availableAssets}
+								defaultValue={this.state.formData.marketType}
+								onChangeHandler={this.selectChangeHandler}
+							/>
+							<TextInput
+								onChangeHandler={this.changeHandler}
+								value={this.state.formData.amount}
+								type='text'
+								placeholder='10.000'
+								label='Monto (mínimo 10.000 COP)'
+								name='amount'
+								minLength='1'
+							/>
+							{button}
+						</form>
+					</div>
+					{/* <div className={cardCss}>Reclama 10.000 COP gratis</div> */}
+
+					{/* <div className='mx-auto p-4 p-4 shadow w-full  md:max-w-md mx-auto'>
 					<h2>Escoge un activo</h2>
 					<div>
 						<div className='input'>{}</div>
@@ -116,7 +129,13 @@ class Trade extends React.Component {
 						})}
 					</ul>
 				</div> */}
-			</div>
+				</div>
+				<div className={styles.back}>
+					<Link href='/'>
+						<a>Volver al Inicio</a>
+					</Link>
+				</div>
+			</>
 		);
 	}
 }
