@@ -1,0 +1,42 @@
+.landing {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: -10;
+	overflow-x: visible;
+}
+.inside-container {
+	margin: 0 !important;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	display: none;
+	background-color: #1b2127;
+}
+.container {
+	height: 100vh;
+	width: 100vw;
+	margin: 10px 0 !important;
+	padding: 10px !important;
+}
+.form-container {
+	width: 998px;
+	background-color: #1b2127;
+	border-radius: 15px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	left: -10px;
+}
+
+@media (max-width: 720px) {
+	.landing {
+		left: 60%;
+	}
+	.landing > img {
+		transform: rotate(180deg) scaley(100);
+	}
+}

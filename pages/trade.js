@@ -2,6 +2,9 @@ import TextInput from '../components/textInput';
 import Loader from '../components/UI/loader';
 import SelectInput from '../components/selectInput';
 import MainButton from '../components/mainButton';
+import triangles from '../public/svg/triangles.svg';
+
+import styles from './trade.module.scss';
 
 class Trade extends React.Component {
 	state = {
@@ -68,21 +71,12 @@ class Trade extends React.Component {
 			button = <h2>¡Orden creada exitosamente!</h2>;
 		}
 		return (
-			<>
-				{/* <div className='mx-auto p-4 p-4 shadow w-full  md:max-w-md mx-auto'>
-					<h2>Escoge un activo</h2>
-					<div>
-						<div className='input'>{}</div>
-					</div>
-					<ul>
-						{this.state.availableAssets.map((asset) => {
-							return <li>{asset.name}</li>;
-						})}
-					</ul>
-				</div> */}
-
-				<div className='p-4 shadow w-full  md:max-w-md mx-auto'>
-					<form>
+			<div className='container'>
+				<div className={styles.landing}>
+					<img src={triangles} />
+				</div>
+				<div className='p-4 mt-5 shadow w-full  md:max-w-md mx-auto form-container'>
+					<form className='inside-container'>
 						{/* <TextInput
 							onChangeHandler={this.changeHandler}
 							value={this.state.formData.symbol}
@@ -111,7 +105,18 @@ class Trade extends React.Component {
 						{button}
 					</form>
 				</div>
-			</>
+				{/* <div className='mx-auto p-4 p-4 shadow w-full  md:max-w-md mx-auto'>
+					<h2>Escoge un activo</h2>
+					<div>
+						<div className='input'>{}</div>
+					</div>
+					<ul>
+						{this.state.availableAssets.map((asset) => {
+							return <li>{asset.name}</li>;
+						})}
+					</ul>
+				</div> */}
+			</div>
 		);
 	}
 }

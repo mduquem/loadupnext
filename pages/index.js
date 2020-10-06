@@ -237,12 +237,12 @@ class Home extends React.Component {
 								</Link>
 							</div>
 						</div>
-						<div className='iphone-container'>
+						{/* <div className='ihpone-container'>
 							<img
 								src={iphone}
 								alt='iphone screenshot with stock data and graphics'
 							/>
-						</div>
+						</div> */}
 					</div>
 				</div>
 
@@ -277,6 +277,7 @@ class Home extends React.Component {
 							margin: 10px 0 !important;
 							padding: 10px !important;
 						}
+
 						@media (max-width: 720px) {
 							* {
 								margin: 0 !important;
@@ -323,9 +324,7 @@ class Home extends React.Component {
 							.landing > img {
 								transform: rotate(180deg) scaley(100);
 							}
-							.iphone-container {
-								display: none;
-							}
+
 							.list,
 							.list-item {
 								list-style: none !important;
@@ -363,9 +362,7 @@ class Home extends React.Component {
 							top: -40px;
 							max-width: 40%;
 						}
-						.mobile-container {
-							display: none;
-						}
+
 						.title {
 							font-size: 48px;
 							font-weight: 800;
